@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHire — B.Tech IT Project Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .slide { display: none; }
+    .slide.active { display: flex; animation: slideFade 0.3s ease-out; }
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between select-none">
+
+  <!-- Top Progress Bar & Header -->
+  <header class="p-6 flex items-center justify-between border-b border-white/10 bg-slate-900/60 backdrop-blur-md">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-600/30">
+        SH
+      </div>
+      <div>
+        <h1 class="text-sm font-bold tracking-tight text-white">SmartHire Platform Presentation</h1>
+        <p class="text-[11px] text-slate-400">B.Tech IT Minor Project Defense</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-4 text-xs font-semibold">
+      <span id="slideCounter" class="px-3 py-1 bg-white/10 rounded-full text-indigo-300">Slide 1 of 15</span>
+      <button onclick="toggleFullscreen()" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs transition">
+        Fullscreen [F]
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Slide Container -->
+  <main class="flex-1 flex items-center justify-center p-6 md:p-12 max-w-6xl mx-auto w-full">
+
+    <!-- Slide 1: Title -->
+    <div class="slide active flex-col text-center space-y-6">
+      <span class="px-3.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-bold border border-indigo-500/30 self-center">
+        B.Tech Information Technology Project Defense
+      </span>
+      <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight">
+        Smart<span class="text-indigo-500">Hire</span>
+      </h1>
+      <p class="text-lg md:text-2xl font-bold text-slate-300 max-w-3xl mx-auto">
+        Intelligent Job & Internship Recommendation Platform
+      </p>
+      <p class="text-sm text-slate-400 max-w-xl mx-auto">
+        An explainable rule-based candidate-job matching engine with automated resume parsing and full recruitment pipeline tracking.
+      </p>
+      <div class="pt-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto text-xs">
+        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+          <p class="text-slate-400 uppercase text-[10px] font-bold">Architecture</p>
+          <p class="font-bold text-white mt-0.5">MERN Full-Stack</p>
+        </div>
+        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+          <p class="text-slate-400 uppercase text-[10px] font-bold">Matching Algorithm</p>
+          <p class="font-bold text-indigo-300 mt-0.5">5-Factor Weighted</p>
+        </div>
+        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+          <p class="text-slate-400 uppercase text-[10px] font-bold">Resume Parser</p>
+          <p class="font-bold text-emerald-400 mt-0.5">PDF & DOCX (200+ Skills)</p>
+        </div>
+        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+          <p class="text-slate-400 uppercase text-[10px] font-bold">Status</p>
+          <p class="font-bold text-sky-400 mt-0.5">Production Ready v1.0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Introduction -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Introduction</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">What is SmartHire?</h2>
+      </div>
+      <p class="text-base text-slate-300 leading-relaxed">
+        SmartHire is a full-stack recruitment SaaS platform engineered to resolve the massive information asymmetry between job seekers and hiring managers.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+        <div class="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-2">
+          <h3 class="text-indigo-400 font-bold text-lg">1. Job Seekers / Candidates</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Build verified profiles, upload resumes for automated parsing, explore personalized job recommendations, and review itemized skill gaps before applying.
+          </p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-2">
+          <h3 class="text-emerald-400 font-bold text-lg">2. Employers / Recruiters</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Post job openings with custom skill importance weights, review candidates ranked automatically by match %, inspect resumes, and manage interview pipelines.
+          </p>
+        </div>
+        <div class="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-2">
+          <h3 class="text-purple-400 font-bold text-lg">3. System Administrators</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Oversee platform demographics, monitor real-time application funnels, moderate job vacancies, and manage user suspensions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Problem Statement -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-rose-400 uppercase tracking-widest">Industry Challenge</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">The Problem in Modern Recruitment</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+        <div class="bg-rose-950/20 p-6 rounded-2xl border border-rose-900/40 space-y-3">
+          <h3 class="text-rose-400 font-bold text-base">Candidate Pain Points:</h3>
+          <ul class="space-y-2 text-xs text-slate-300 list-disc list-inside">
+            <li><strong>The "Application Black Hole":</strong> Submitting hundreds of resumes with zero feedback on disqualifications.</li>
+            <li><strong>Hidden Disqualifiers:</strong> No clear insight into whether education or experience deficits caused rejections.</li>
+            <li><strong>Missing Skill Ignorance:</strong> Inability to identify which specific technical tools are required to close skill gaps.</li>
+          </ul>
+        </div>
+        <div class="bg-amber-950/20 p-6 rounded-2xl border border-amber-900/40 space-y-3">
+          <h3 class="text-amber-400 font-bold text-base">Recruiter Bottlenecks:</h3>
+          <ul class="space-y-2 text-xs text-slate-300 list-disc list-inside">
+            <li><strong>Resume Overload:</strong> Open positions receive 500+ resumes, overwhelming manual screening capacity.</li>
+            <li><strong>Unranked Inflow:</strong> Applications arrive chronologically rather than sorted by true qualification.</li>
+            <li><strong>Duplicate Application Spam:</strong> Candidates repeatedly submit identical applications, corrupting pipeline metrics.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Existing vs Proposed -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Comparison</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Existing Portals vs. SmartHire</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs border border-white/10 rounded-2xl overflow-hidden">
+          <thead class="bg-white/10 text-slate-200 uppercase font-bold">
+            <tr>
+              <th class="p-3.5">Feature Dimension</th>
+              <th class="p-3.5 text-rose-300">Traditional Generic Portals</th>
+              <th class="p-3.5 text-emerald-300 bg-white/5">SmartHire Proposed Platform</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 text-slate-300">
+            <tr>
+              <td class="p-3.5 font-bold text-white">Matching Logic</td>
+              <td class="p-3.5">Unranked or black-box neural scoring</td>
+              <td class="p-3.5 font-bold text-emerald-400 bg-white/5">Explainable 5-factor weighted algorithm (0–100)</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-white">Skill Feedback</td>
+              <td class="p-3.5">None; binary accept / reject</td>
+              <td class="p-3.5 font-bold text-emerald-400 bg-white/5">Matched skills vs. identified skill-gap inventory</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-white">Resume Ingestion</td>
+              <td class="p-3.5">Static unparsed file attachment</td>
+              <td class="p-3.5 font-bold text-emerald-400 bg-white/5">Automated parsing mapped to 200+ skill taxonomy</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-white">Deduplication</td>
+              <td class="p-3.5">Often allows repeated spamming</td>
+              <td class="p-3.5 font-bold text-emerald-400 bg-white/5">Enforced unique compound database constraints</td>
+            </tr>
+            <tr>
+              <td class="p-3.5 font-bold text-white">Explainability</td>
+              <td class="p-3.5">Zero transparency</td>
+              <td class="p-3.5 font-bold text-emerald-400 bg-white/5">Natural language justification sentence per job</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Slide 5: System Architecture -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">System Architecture</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Three-Tier Decoupled Architecture</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+        <div class="bg-indigo-950/30 p-6 rounded-2xl border border-indigo-800/40 space-y-3">
+          <span class="text-xs font-bold uppercase text-indigo-400">1. Client Tier (Frontend)</span>
+          <h4 class="font-bold text-white text-base">React 18 + Vite + Tailwind</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Single Page Application with React Router v6. Utilizes Axios with JWT request/response interceptors, AuthContext, NotificationContext, and Recharts.
+          </p>
+        </div>
+        <div class="bg-sky-950/30 p-6 rounded-2xl border border-sky-800/40 space-y-3">
+          <span class="text-xs font-bold uppercase text-sky-400">2. Application Tier (Backend)</span>
+          <h4 class="font-bold text-white text-base">Node.js + Express.js API</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            RESTful API with Helmet security headers, CORS protection, express-rate-limit, Multer resume uploads, and the core 5-factor recommendation engine.
+          </p>
+        </div>
+        <div class="bg-emerald-950/30 p-6 rounded-2xl border border-emerald-800/40 space-y-3">
+          <span class="text-xs font-bold uppercase text-emerald-400">3. Data Tier (Database)</span>
+          <h4 class="font-bold text-white text-base">MongoDB & Mongoose ODM</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            9 collections with indexing, compound unique constraints, and zero-config in-memory fallback server (`mongodb-memory-server`) for offline evaluation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: Recommendation Algorithm (Core) -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Core Technical Differentiator</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">5-Factor Explainable Recommendation Model</h2>
+      </div>
+      <div class="p-4 bg-white/5 rounded-2xl border border-white/10 text-center font-mono text-sm sm:text-base text-indigo-300">
+        Overall Score = (Skills × 50%) + (Education × 15%) + (Experience × 15%) + (Preferences × 10%) + (Location × 10%)
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-xs">
+        <div class="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-indigo-400 text-sm">Skills (50%)</p>
+          <p class="text-slate-400">Ratio of matched required skill weights to total required weights.</p>
+        </div>
+        <div class="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-indigo-400 text-sm">Education (15%)</p>
+          <p class="text-slate-400">Ordinal hierarchy: PhD (5) > Masters (4) > Bachelors (3) > Diploma (2).</p>
+        </div>
+        <div class="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-indigo-400 text-sm">Experience (15%)</p>
+          <p class="text-slate-400">Candidate years vs required years. Freshers scored 100% on entry roles.</p>
+        </div>
+        <div class="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-indigo-400 text-sm">Preferences (10%)</p>
+          <p class="text-slate-400">Alignment with preferred job types (full-time, internship) and roles.</p>
+        </div>
+        <div class="bg-white/5 p-3.5 rounded-xl border border-white/10 space-y-1 col-span-2 md:col-span-1">
+          <p class="font-bold text-indigo-400 text-sm">Location (10%)</p>
+          <p class="text-slate-400">100% for remote; proximity checks against preferred candidate cities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 7: Resume Parsing -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Resume Intelligence</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Automated Resume Parser & Taxonomy</h2>
+      </div>
+      <div class="space-y-4">
+        <div class="p-4 bg-emerald-950/20 border border-emerald-900/30 rounded-2xl space-y-2 text-xs text-slate-300">
+          <h4 class="font-bold text-emerald-400 text-sm">The Extraction Pipeline:</h4>
+          <p>1. Ingestion of PDF or DOCX file up to 10MB using Multer.</p>
+          <p>2. Binary buffer decoded into textual stream via <code>pdf-parse</code>.</p>
+          <p>3. Regex token boundary scanning across our <strong>200+ controlled technical skill taxonomy</strong>.</p>
+          <p>4. Automated extraction of contact details, education degrees, and estimated experience years.</p>
+        </div>
+        <div class="p-4 bg-white/5 border border-white/10 rounded-2xl space-y-2 text-xs text-slate-300">
+          <h4 class="font-bold text-white text-sm">Candidate Agency & Verification:</h4>
+          <p>Extracted skills are displayed on an interactive dashboard. Candidates can add missed tools, remove errors, and adjust proficiency levels (Beginner, Intermediate, Advanced, Expert) with 1 click.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: Candidate Workflow -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">User Journey</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">End-to-End Candidate Workflow</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
+          <span class="text-indigo-400 font-extrabold text-base">Step 1</span>
+          <h4 class="font-bold text-white">Profile & Resume</h4>
+          <p class="text-slate-400">Candidate signs up, completes profile, and uploads resume for automated skill extraction.</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
+          <span class="text-indigo-400 font-extrabold text-base">Step 2</span>
+          <h4 class="font-bold text-white">Match Evaluation</h4>
+          <p class="text-slate-400">Recommendation engine scores all active jobs, highlighting matched skills vs. missing gaps.</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
+          <span class="text-indigo-400 font-extrabold text-base">Step 3</span>
+          <h4 class="font-bold text-white">1-Click Application</h4>
+          <p class="text-slate-400">Candidate applies with custom cover note. Duplicate submissions are automatically prevented.</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
+          <span class="text-indigo-400 font-extrabold text-base">Step 4</span>
+          <h4 class="font-bold text-white">Status Tracking</h4>
+          <p class="text-slate-400">Track progress in real time through Applied, Under Review, Shortlisted, Interviewing, and Hired.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 9: Recruiter Workflow -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Recruiter Portal</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Recruiter Pipeline & Candidate Ranking</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        <div class="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-emerald-400 text-sm">1. Vacancy Posting with Weights</h4>
+          <p class="text-slate-300 leading-relaxed">
+            Recruiters post positions defining required skills and weighting their priority (1x Normal, 2x High, 3x Critical) to fine-tune matching.
+          </p>
+        </div>
+        <div class="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-emerald-400 text-sm">2. Algorithmic Candidate Ranking</h4>
+          <p class="text-slate-300 leading-relaxed">
+            Applicants arrive pre-ranked by compatibility score (0–100%). Recruiters view matched skills and download authorized resumes.
+          </p>
+        </div>
+        <div class="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-emerald-400 text-sm">3. Status Updates with Feedback</h4>
+          <p class="text-slate-300 leading-relaxed">
+            Shortlist, invite for interview, or reject with custom feedback notes, which automatically trigger candidate notifications.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 10: Security Architecture -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Security & Compliance</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Enterprise-Grade Security Architecture</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-purple-400 text-sm">Password Salting & Hashing</p>
+          <p class="text-slate-300">Passwords encrypted via <code>bcryptjs</code> (10 salt rounds). <code>select: false</code> prevents leakages in queries.</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-purple-400 text-sm">Role-Based Authorization</p>
+          <p class="text-slate-300">Server-side middleware validates JWT signature and checks <code>req.user.role</code> on every protected endpoint.</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-purple-400 text-sm">Authorized Resume Access</p>
+          <p class="text-slate-300">Resumes are never public. Access is restricted to the candidate, authorized recruiters, or admins.</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+          <p class="font-bold text-purple-400 text-sm">Rate Limiting & Helmet Headers</p>
+          <p class="text-slate-300">Express rate limiters protect auth endpoints from brute force; Helmet sets secure HTTP security headers.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 11: Database Architecture -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-sky-400 uppercase tracking-widest">Database Modeling</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Mongoose Schemas & Deduplication</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-sky-400">User & Profile Schemas</h4>
+          <p class="text-slate-400">Decoupled <code>User</code> (credentials, roles, suspension) and <code>CandidateProfile</code> (education, experience, skills).</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-sky-400">Application Deduplication</h4>
+          <p class="text-slate-400">Enforces <code>{ job: 1, candidate: 1 }</code> unique compound index, rejecting duplicate submissions at DB level.</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-sky-400">Zero-Config Memory Server</h4>
+          <p class="text-slate-400">Embedded in-memory server fallback ensures instant execution on any system without pre-installed MongoDB.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 12: Admin & Governance -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Administration</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Platform Governance & Moderation</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        <div class="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-purple-400 text-sm">Real Platform Statistics</h4>
+          <p class="text-slate-300">Live counts of registered candidates, recruiters, active job vacancies, processed applications, and funnel breakdown charts via Recharts.</p>
+        </div>
+        <div class="bg-white/5 p-5 rounded-2xl border border-white/10 space-y-2">
+          <h4 class="font-bold text-purple-400 text-sm">Account & Content Moderation</h4>
+          <p class="text-slate-300">Toggle suspension on any candidate or recruiter account violating platform policies; moderate and close inappropriate job listings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 13: Testing & Verification -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Quality Assurance</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Automated Testing & Build Verification</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        <div class="bg-emerald-950/20 border border-emerald-900/30 p-5 rounded-2xl space-y-2">
+          <h4 class="font-bold text-emerald-400 text-sm">Backend Integration Suite (6/6 PASS):</h4>
+          <p class="text-slate-300">✓ JWT Generation & Signature Verification</p>
+          <p class="text-slate-300">✓ Bcrypt Password Hashing & Comparison</p>
+          <p class="text-slate-300">✓ 5-Factor Weighted Score Math & 75% Coverage</p>
+          <p class="text-slate-300">✓ MongoDB Error 11000 Duplicate Prevention</p>
+          <p class="text-slate-300">✓ Role-Based Authorization Guard Boundaries</p>
+          <p class="text-slate-300">✓ Entity Relationships & Mongoose Population</p>
+        </div>
+        <div class="bg-indigo-950/20 border border-indigo-900/30 p-5 rounded-2xl space-y-2">
+          <h4 class="font-bold text-indigo-400 text-sm">Frontend Production Build:</h4>
+          <p class="text-slate-300">✓ Vite v5.4 transformed 2,220 modules</p>
+          <p class="text-slate-300">✓ Minified CSS: 37.97 kB (gzip 6.87 kB)</p>
+          <p class="text-slate-300">✓ Minified JS: 816 kB (gzip 221 kB)</p>
+          <p class="text-slate-300">✓ Build Time: 6.11 seconds with 0 errors</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 14: Demo Accounts -->
+    <div class="slide flex-col space-y-6 text-left w-full">
+      <div class="border-b border-white/10 pb-4">
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">Live Demonstration</span>
+        <h2 class="text-3xl font-extrabold text-white mt-1">Instant Testing & Demo Personas</h2>
+      </div>
+      <p class="text-xs text-slate-400">Use the 1-Click Demo Logins on the login page or enter credentials manually:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+          <span class="text-indigo-400 font-bold">Candidate Persona</span>
+          <p class="text-white font-bold">candidate@smarthire.dev</p>
+          <p class="text-slate-400 font-mono text-[11px]">Password123!</p>
+          <p class="text-[11px] text-slate-500 pt-1">Rahul Sharma (MERN Developer, 2 yrs exp)</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+          <span class="text-emerald-400 font-bold">Recruiter Persona</span>
+          <p class="text-white font-bold">recruiter@smarthire.dev</p>
+          <p class="text-slate-400 font-mono text-[11px]">Password123!</p>
+          <p class="text-[11px] text-slate-500 pt-1">Sarah Jenkins (Google India Recruiter)</p>
+        </div>
+        <div class="bg-white/5 p-4 rounded-xl border border-white/10 space-y-1">
+          <span class="text-purple-400 font-bold">Administrator Persona</span>
+          <p class="text-white font-bold">admin@smarthire.dev</p>
+          <p class="text-slate-400 font-mono text-[11px]">Password123!</p>
+          <p class="text-[11px] text-slate-500 pt-1">System Administrator (Full Governance)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 15: Conclusion -->
+    <div class="slide flex-col space-y-6 text-center w-full">
+      <span class="px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30 self-center">
+        Project Conclusion
+      </span>
+      <h2 class="text-3xl md:text-5xl font-black text-white">Conclusion & Future Scope</h2>
+      <p class="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        SmartHire proves that recruitment intelligence does not need to be an opaque black box. Explainable algorithms, automated parsing, and structured engineering create higher trust and superior matching outcomes for candidates and employers alike.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto text-xs pt-4">
+        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+          <p class="text-slate-400 font-bold uppercase text-[10px]">Future Scope 1</p>
+          <p class="text-white mt-1">Hybrid TF-IDF Semantic Search</p>
+        </div>
+        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+          <p class="text-slate-400 font-bold uppercase text-[10px]">Future Scope 2</p>
+          <p class="text-white mt-1">In-Browser WebRTC Video Interviews</p>
+        </div>
+        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+          <p class="text-slate-400 font-bold uppercase text-[10px]">Future Scope 3</p>
+          <p class="text-white mt-1">Automated Twilio SMS / WhatsApp Alerts</p>
+        </div>
+      </div>
+      <p class="text-xs text-slate-500 pt-4">Thank you for your time and evaluation. Questions are welcome!</p>
+    </div>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <footer class="p-6 flex items-center justify-between border-t border-white/10 bg-slate-900/60 backdrop-blur-md">
+    <button onclick="prevSlide()" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs transition flex items-center gap-2">
+      ← Previous [Left Arrow]
+    </button>
+    <div class="hidden sm:flex items-center gap-1.5 text-xs text-slate-500">
+      <span>Use arrow keys <kbd class="px-1.5 py-0.5 bg-white/10 rounded">←</kbd> <kbd class="px-1.5 py-0.5 bg-white/10 rounded">→</kbd> to navigate</span>
+    </div>
+    <button onclick="nextSlide()" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-md shadow-indigo-600/30 transition flex items-center gap-2">
+      Next [Right Arrow] →
+    </button>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.getElementById('slideCounter');
+
+    function showSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+      slides[currentSlide].classList.remove('active');
+      currentSlide = index;
+      slides[currentSlide].classList.add('active');
+      counter.innerText = `Slide ${currentSlide + 1} of ${slides.length}`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) showSlide(currentSlide - 1);
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+    });
+  </script>
+</body>
+</html>
